@@ -72,9 +72,6 @@ body {
 /*************************************************************
 * Our Project Section
 *************************************************************/
-#ourproj{
-    margin: auto;
-}
 #ourproject hr{
     height: 4px;
     width: 100px;
@@ -154,7 +151,7 @@ body {
 /*************************************************************
 * Team Section
 *************************************************************/
-#team hr{
+#team .title hr{
     height: 4px;
     width: 100px;
     text-align: center;
@@ -164,87 +161,298 @@ body {
     margin-bottom: 50px;
     border: 0;
 }
-#team .team {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 100vw;
-    margin: 15px;
-    margin-left: 0;
-    margin-bottom: 1vh;
-    padding: 15px;
-    padding-left: 0;
+
+.team-member hr{
+    height: 4px;
+    width: 50px;
+    text-align: center;
+    position: relative;
+    background-color: gray;
+    border: solid gray;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 0;
 }
-#team h2, #team h3, #team p {
-    font-size: 2vw;
-} 
 
-
-#team .team img{
-    max-width: 450px;
+#team .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
+    border: solid #c11d00;
+}
+
+#team .team {
+    vertical-align: middle;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto 3rem;
+    /*border: solid green;*/
 }
 
 #team .team-member {
-    max-width: 33%;
-    width: 100%;
-    min-height: 400px;
-    background-color: transparent;
+    max-width: calc(20% - 0px);
+    -webkit-box-flex: 0;
+    -ms-flex: 1 1 calc(20% - 0px);
+    flex: 1 1 calc(20% - 0px);
+    padding: 0 15px;
+    position: relative;
+    margin-bottom: 2.25rem;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    padding: 0 0 0 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-}
-#team .team2 .team-member{
-    max-width: 50%;
+    /*border: solid yellow;*/
 }
 
-#team .card-l, #team .card-r {
+#team .card{
     position: relative;
-    transition: transform 0.8s;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(.63,-.32,.4,1.39);
+    transition: -webkit-transform 0.6s cubic-bezier(.63,-.32,.4,1.39);
+    transition: transform 0.6s cubic-bezier(.63,-.32,.4,1.39);
+    transition: transform 0.6s cubic-bezier(.63,-.32,.4,1.39), -webkit-transform .6scubic-bezier(.63,-.32,.4,1.39);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    /*border: solid blue;*/
+    background-color: transparent;
     border: transparent;
-    height: 35%;
-    width: 100%;
-
-}
-#team .team2 .card-l, #team .team2 .card-r {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-#team .team-member:hover .card-l{
+#team .team-member:hover .card{
     transform: rotateY(180deg);
-}
-#team .team-member:hover .card-r{
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #team .card-front, #team .card-back {
     width: 100%;
-    z-index: 1;
-    position: absolute;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
 }
-#team .team2 .card-front, #team .team2 .card-back {
-    width: 30vw;
+
+#team .card-front {
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-perspective: preserve-3d;
+    perspective: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+   /* border: solid pink;*/
 }
 
 #team .card-back {
-    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-perspective: preserve-3d;
+    perspective: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    /*border: solid lime;*/
+    background-color: transparent;
+    
 }
 
-@media (max-width: 1000px) {
-    #team .team-member{
-        max-width: 50%;
+#team .team-member_image{
+    padding-top: 100%;
+    position: relative;
+    margin-bottom: 1.25rem;
+    /*border: solid violet;*/
+}
+
+.team-member_image .img-holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: transparent;
+}
+
+.team-member_image .img-holder img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: optimizeQuality;
+    border-radius: 8px;
+}
+
+.team-member-title {
+    font-family: "Poppins Bold";
+    font-size: 16px;
+    margin-bottom: .25rem;
+}
+
+.team-member-subtitle {
+    font-size: 14px;
+    color: #8ca5c6;
+}
+
+.team-member_info.container-fluid {
+    position: relative;
+    height: 192.48px;
+    width: 187.68px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: rgb(70,70,70);
+    /*border: solid red;*/
+}
+
+
+.team-member-subtitle.LinkedIn {
+    position: absolute;
+    bottom: 65%;
+    left: 15%;
+}
+.team-member-subtitle.Github {
+    position: absolute;
+    bottom: 45%;
+    left: 20%;
+}
+
+#team .team-about.container {
+    width: 90%;
+    margin-left: auto;
+    padding: 20px;
+}
+
+/* Tablet: Show 3 per row */
+@media (max-width: 1024px) {
+    #team .team-member {
+        -webkit-box-flex: 0;
+        -ms-flex: 1 1 calc(33.33% - 30px);
+        flex: 1 1 calc(33.33% - 30px);
+        max-width: calc(33.33% - 30px);
     }
 }
 
+/* Mobile: Show 2 per row */
+@media (max-width: 768px) {
+    #team .team-member {
+        -webkit-box-flex: 0;
+        -ms-flex: 1 1 calc(50% - 30px);
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+/* Small Mobile: Show 1 per row */
+@media (max-width: 480px) {
+    #team .team-member {
+        -webkit-box-flex: 0;
+        -ms-flex: 1 1 calc(100% - 0px);
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/*************************************************************
+* Blog Section
+*************************************************************/
+.blog-section .title hr{
+    height: 4px;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    background: #00acc1;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border: 0;
+}
+
+#blog-posts a {
+    color: white;
+}
+
+#blog-posts .btn a:hover {
+    text-decoration: none;
+}
+#blog-posts .btn:hover {
+    background-color: rgb(20, 99, 99);
+}
+
+.blog-subtitle {
+    margin-left: 20px;
+}
+
+.blog-card-group.container{
+    position: relative;
+    border: solid red;
+}
+
+.blog-card {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 20px;
+
+    background: rgb(70,70,70);
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
+    transition: 0.25sease;
+    border: solid green;
+}
+
+
+.blog-card_banner {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    border: solid blue;
+}
+
+.blog-banner-image-holder {
+    border: solid black;
+}  
+
+.blog-banner-image-holder img {
+    width: 450px;
+    height: 374px;
+}
+
+.blog-content-wrapper{
+    border: solid yellow;
+}
+
+.blog-summary {
+    font-size: var(--fs-4);
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.load-more {
+    margin-inline: auto;
+    margin-left: 30vw;
+    background: rgb(70,70,70);
+    color: white;
+    padding: 0.6875rem 1.1875rem;
+}
+
+.btn {
+    min-width: 10rem;
+    border-radius: 100px;
+}
