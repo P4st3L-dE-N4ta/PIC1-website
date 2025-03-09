@@ -7,18 +7,18 @@ function updateTextContainerHeights () {
 
     function resize(item) {
         const image = item.querySelector('img');  // Get the image in the current pair
-        const textContainer = item.querySelector('.text-holder');  // Get the corresponding text container
+        const textContainer = item.querySelector(".text-container");  // Get the corresponding text container
             
             // Make sure the image has fully loaded
             if(image.getAttribute("alt") != "img3" && image.getAttribute("alt") != "img4"){
                 if (image.complete) {
-                    const imageHeight = image.clientHeight;  // Get the height of the image
-                    textContainer.style.height = imageHeight - 20 + 'px';  // Set the height of the text container
+                    const imageHeight = image.clientHeight - 20;  // Get the height of the image
+                    textContainer.style.height = imageHeight + 'px';  // Set the height of the text container
                 } else {
                     // If image is not loaded yet, listen for it to load
                     image.onload = function() {
                         const imageHeight = image.clientHeight;
-                        textContainer.style.height = imageHeight - 20 + 'px';
+                        textContainer.style.height = imageHeight + 'px';
                     };
                 }
             }
