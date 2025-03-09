@@ -8,19 +8,31 @@
 
 
 
-/**************************************************************
- * Our Project for smaller screens
- *************************************************************/
-function updateHeroSection() {
-    if(window.innerWidth < 1380) {
-        fetch("smaller_screens.html")
-        .then(response => response.text()) // Convert response to text
-        .then(data => {
-            document.getElementById("ourproject").innerHTML = data; // Insert content
-        })
-        .catch(error => console.error("Error loading content:", error));
-    }
-}
 
-window.addEventListener("load", updateHeroSection);
-window.addEventListener("resize", updateHeroSection);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all blog posts
+    const blogPosts = document.querySelectorAll('.blog-card');
+
+    // Initially show only the first 3 posts
+    for (let i = 3; i < blogPosts.length; i++) {
+        blogPosts[i].style.display = 'none'; // Hide all except the first 3
+    }
+
+    // Toggle button to show all posts
+    const toggleButton = document.querySelector('.load-more');
+    
+    toggleButton.addEventListener('click', function() {
+        // Check if posts are expanded
+        const arePostsExpanded = blogPosts[3].style.display !== 'none';
+        
+        // Toggle visibility
+        for (let i = 3; i < blogPosts.length; i++) {
+            blogPosts[i].style.display = arePostsExpanded ? 'none' : 'grid';
+        }
+        
+        // Change button text based on visibility
+        toggleButton.textContent = arePostsExpanded ? 'See All Blog Posts' : 'Show Less';
+    });
+});
+

@@ -8,13 +8,14 @@ body {
     background-color: rgb(90, 90 ,90);
     color: white;
     margin: 0;
+    font-size: 15pt;
 }
 
 
 
 .figcaption {
     color: lightgray;
-    font-size: 1vw;
+    font-size: 0.7vw;
 }
 
 
@@ -82,68 +83,60 @@ body {
     margin-bottom: 50px;
     border: 0;
 }
+#ourproject {
+    margin-top: 5vw;
+}
 
-
-#ourproject >* :not(.container-fluid) {
+.flex-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2%; 
+    padding-bottom: 0px;
+    border-radius: 8px;
+    
+}
+.text-container{
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: flex-start;
+    align-content: center;
+    padding: 30px;
+    background-color: rgb(70,70,70);
+}
+.img-container img{
     border-radius: 8px;
 }
-
-#ourproject >* p {
-    font-size: 15pt;
+.text-container h3 {
+    margin-bottom: 20px;
+}
+.text2, .text4 {
+    order: 1;
+}
+.img2, .img4 {
+    order: 2;
 }
 
-#ourproj_firstblock .col-md-8 ,
-#ourproj_thirdblock .col-md-8 {
-    margin-left: 10px;
-    background: rgb(70,70,70);
-}
-#ourproj_firstblock .col-md-auto,
-#ourproj_thirdblock .col-md-auto  {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
-}
-#ourproj_secondblock .col-md-8,
-#ourproj_fourthblock .col-md-7 {
-    margin-right: 10px;
-    background: rgb(70,70,70);
-}
-#ourproj_secondblock .col-md-auto,
-#ourproj_fourthblock .col-md-auto {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10px;
-}
 
-@media (max-width: 1380px) {
-    .grid-information >* { /* Para todos os filhos */
-        margin-bottom: 20px;
+@media (max-width: 1231px) {
+
+    .text2, .text4 {
+        order: 2;
     }
-    .grid-information img {
-        margin: auto;
-        width: 50%;
-        border-radius: 8px;
+    .img2, .img4 {
+        order: 1;
     }
-    .grid-information .block7 img{
-        width: 70%;
+    .flex-container {
+        flex-wrap: wrap;
     }
-    .grid-information .container {
-        width: 90%;
-        margin: auto;
-        padding: 5%;
-        background: rgb(70,70,70);
-        border-radius: 8px;
-        margin-bottom: 20%;
-    }
-    .grid-information p {
+
+    .text-holder{
         font-size: 2vw;
     }
-    .grid-information .figcaption {
-        margin-left: 45vw;
+    .img-holder img{
+        width: 70%;
     }
-    .grid-information .block5 .figcaption{
-        margin-left: 40vw;
-    } 
 
 }
 
@@ -179,7 +172,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    border: solid #c11d00;
+    /*border: solid #c11d00;*/
 }
 
 #team .team {
@@ -365,6 +358,9 @@ body {
     }
 }
 
+
+
+
 /*************************************************************
 * Blog Section
 *************************************************************/
@@ -379,7 +375,7 @@ body {
     border: 0;
 }
 
-#blog-posts a {
+.blog-section a {
     color: white;
 }
 
@@ -389,28 +385,39 @@ body {
 #blog-posts .btn:hover {
     background-color: rgb(20, 99, 99);
 }
-
+.blog-content-wrapper a {
+    color: rgb(32, 210, 246);
+}
+.blog-header p {
+    color: rgb(130, 130, 130);
+}
+.blog-post-title {
+    margin-bottom: 30px;
+}
+.blog-header{
+    margin-top: 5%;
+}
 .blog-subtitle {
     margin-left: 20px;
 }
 
 .blog-card-group.container{
     position: relative;
-    border: solid red;
+    /*border: solid red;*/
 }
 
 .blog-card {
     display: grid;
     grid-template-columns: 3fr 4fr;
     gap: 20px;
-
     background: rgb(70,70,70);
     padding: 10px;
     margin-bottom: 1rem;
     border-radius: 10px;
     box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
     transition: 0.25sease;
-    border: solid green;
+    /*border: solid green;*/
+    margin-bottom: 50px;
 }
 
 
@@ -418,27 +425,31 @@ body {
     display: block;
     overflow: hidden;
     border-radius: 8px;
-    border: solid blue;
+    /*border: solid blue;*/
 }
 
-.blog-banner-image-holder {
+/*.blog-banner-image-holder {
     border: solid black;
-}  
+}*/
+.blog-banner-image-holder img {
+    border-radius: 8px;
+    border: solid black;
+}
 
 .blog-banner-image-holder img {
     width: 450px;
-    height: 374px;
+    height: 450px;
 }
 
-.blog-content-wrapper{
+/*.blog-content-wrapper{
     border: solid yellow;
-}
+}*/
 
 .blog-summary {
     font-size: var(--fs-4);
     display: -webkit-box;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
+    line-clamp: 8;
+    -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -455,4 +466,14 @@ body {
 .btn {
     min-width: 10rem;
     border-radius: 100px;
+}
+
+
+
+/*************************************************************
+* Footer Section
+*************************************************************/
+#main-footer{
+    background-color: rgb(70, 70, 70);
+    color: #fff;
 }
