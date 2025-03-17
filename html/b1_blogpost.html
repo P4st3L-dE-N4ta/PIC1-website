@@ -22,104 +22,106 @@
 </head>
 
 <body>
-    <div id="blog-title" class="blog-title">
-        <h1>Reunião com o ISR</h1>
-    </div>
-    <div id="blog-subtitles" class="blog-subtitles">
-        <div class="summary section">
-            <h2> Summary </h2>
-            <p>
-                Hi, everybody! This is the 1st of many upcoming posts on our blog. During this initial week of work,
-                we made some progress on the software part of our prototype - most importantly, we set up the
-                communication between the transmitter and the receiver and solved some issues that came up.
-                Another important event that happened was a meeting with Luís Sebastião, research engineer at ISR,
-                more specifically, the DSOR group, with whom we discussed the possibility of a collaboration.
-                We also went over our ideas for the prototype, to which Luís gave some opinions and even some
-                critical suggestions. Lastly, we also watched the first of many seminars prompted by the ElectroCap program.
-            </p>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Meeting with Autonomous Systems in Underwater Environments Investigation Center</h1>
         </div>
-        <div class="sections">
-            <div class="subtitle section">
-                <h2> 1st week of work </h2>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
                 <p>
-                    Welcome to our blog, everybody! Here, we will regularly be giving updates about our progress. Stay tuned!
+                    Hi, everybody! This is the 1st of many upcoming posts on our blog. During this initial week of work,
+                    we made some progress on the software part of our prototype - most importantly, we set up the
+                    communication between the transmitter and the receiver and solved some issues that came up.
+                    Another important event that happened was a meeting with Luís Sebastião, research engineer at ISR,
+                    more specifically, the DSOR group, with whom we discussed the possibility of a collaboration.
+                    We also went over our ideas for the prototype, to which Luís gave some opinions and even some
+                    critical suggestions. Lastly, we also watched the first of many seminars prompted by the ElectroCap program.
                 </p>
             </div>
-            <div class="section1 section">
-                <h3> Software progress </h3>
+            <div class="sections">
+                <div class="subtitle section">
+                    <h2> 1st week of work </h2>
+                    <p>
+                        Welcome to our blog, everybody! Here, we will regularly be giving updates about our progress. Stay tuned!
+                    </p>
+                </div>
+                <div class="section1 section">
+                    <h3> Software progress </h3>
+                    <p>
+                        With the beginning of the semester, we began some of the more serious activities of the project. 
+                        First of all, and most importantly, we immediately began working on the software component of our project.
+                    </p>
+                    <p>
+                        Using materials previously owned by the team which seemed enough to set us on our way (namely, a couple of 
+                        sensors and some infrared receptors), we began by writing a program made to send and receive information using 
+                        OOK (on-off keying). There was an immediate setback - the circuit worked at very low frequencies (about 5 Hz), 
+                        but the communication between the parts stopped as soon as we started increasing the tests’ value, even while 
+                        still remaining at a very low frequency (about 100 Hz). This problem was caused because, since the integrated 
+                        circuit had a processor with a RISC ISA, the large amount of instructions needed to perform simple operations 
+                        meant that the task loop written simply took too much time, leading to a mismatch between the duration of the 
+                        processes regarding each of the emitter and the receptor components. In order to fix this issue, we looked at 
+                        the processor’s clock speed and tweaked the frequency that governed the communication loop, solving the problem
+                        and eventually managing to obtain a transmission rate of about 1 Kbps!
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> 1st seminar </h3>
+                    <p>
+                        This week, we also watched the first of several ElectroCap seminars. During this weeks’ seminar, professor 
+                        Luís Caldas de Oliveira, the one responsible for the ElectroCap program, started by revising the projects’ 
+                        evaluation method facing a full IA classroom.
+                    </p>
+                    <p>
+                        Then, the microphone was passed to Miguel Gonçalves, a successful entrepreneur with a bachelor’s in 
+                        Psychology who is the current executive commander of Magma Studio, who came to brighten up our day with a 
+                        whole atmosphere of positivity and motivation. As Miguel asked us questions about our expectations related
+                        to the program and our objectives towards our future professional life, he would, amid stories about his 
+                        inspiring life, look to deconstruct our preconceived mental barriers about the project in a way that made 
+                        us understand and look to fulfill all of our potential, offering advice and some well needed fresh perspectives,
+                        even interacting with the crowd and “scheduling” a meeting with one of the teams!
+                    </p>
+                    <p>
+                        Above all else, it was a relaxing occasion which gave us a little push in the right direction and made us organize
+                        our thoughts just a little bit better, with some much needed bits of humor in between. Thanks, Miguel!
+                    </p>
+                </div>
+                <div class="section3 section">
+                    <h3> DSOR meeting </h3>
+                    <p>
+                        Lastly, this Friday we had the pleasure of meeting with Luís Sebastião, research engineer at ISR (Institute for
+                        Systems and Robotics). Luís belongs to the DSOR (Dynamical Systems and Oceanic Robots Lab) group, which focuses
+                        on the design and operation of autonomous marine and aerial robots. 
+                    </p>
+                    <p>
+                        Given the fact that our project has an aquatic component, we initially met with Luís to discuss the possibility 
+                        of using DSOR’s facilities (namely, their large water tank) to perform some of the underwater tests with our product, 
+                        request to which Luís obliged, while also asking questions about the validity of our ideas and the applicability of our 
+                        implementation. While we initially thought of having the device strapped to the divers’ wrist, Luís suggested that we 
+                        instead have it placed in the user’s head, with the possibility of using multiple receptors. Our initial concept meant 
+                        that the user would have to point their wrist towards their partner, whereas Luís’ idea made the whole process simpler; 
+                        the diver would merely have to look to their partner, making not only the communication part easier, but also freeing up 
+                        the user’s hands and increasing efficiency in the process. 
+                    </p>
+                    <p>
+                        Another one of Luís’ suggestions was expanding our project to the development of underwater autonomous vehicles, given their 
+                        increasing value in an ever more self-governing world. More specifically, Luís turned our attention to several of the problems 
+                        faced by the industry, such as the lack of underwater positioning systems, the existing difficulty in the synchronization of 
+                        several vehicles operating in a parallel manner and the possibility of building a docking station for these vehicles.
+                    </p>
+                    <p>
+                        The meeting proved worthwhile, and we look forward to working with Luís and the whole DSOR team!
+                    </p>
+                </div>
+            </div>
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
                 <p>
-                    With the beginning of the semester, we began some of the more serious activities of the project. 
-                    First of all, and most importantly, we immediately began working on the software component of our project.
-                </p>
-                <p>
-                    Using materials previously owned by the team which seemed enough to set us on our way (namely, a couple of 
-                    sensors and some infrared receptors), we began by writing a program made to send and receive information using 
-                    OOK (on-off keying). There was an immediate setback - the circuit worked at very low frequencies (about 5 Hz), 
-                    but the communication between the parts stopped as soon as we started increasing the tests’ value, even while 
-                    still remaining at a very low frequency (about 100 Hz). This problem was caused because, since the integrated 
-                    circuit had a processor with a RISC ISA, the large amount of instructions needed to perform simple operations 
-                    meant that the task loop written simply took too much time, leading to a mismatch between the duration of the 
-                    processes regarding each of the emitter and the receptor components. In order to fix this issue, we looked at 
-                    the processor’s clock speed and tweaked the frequency that governed the communication loop, solving the problem
-                    and eventually managing to obtain a transmission rate of about 1 Kbps!
+                    As you have read, we’ve had quite the week! We already have a lot on our hands and look to the coming weeks and months with a 
+                    lot of excitement. Thank you for reading and we’ll see you on our next post!
                 </p>
             </div>
-            <div class="section2 section">
-                <h3> 1st seminar </h3>
-                <p>
-                    This week, we also watched the first of several ElectroCap seminars. During this weeks’ seminar, professor 
-                    Luís Caldas de Oliveira, the one responsible for the ElectroCap program, started by revising the projects’ 
-                    evaluation method facing a full IA classroom.
-                </p>
-                <p>
-                    Then, the microphone was passed to Miguel Gonçalves, a successful entrepreneur with a bachelor’s in 
-                    Psychology who is the current executive commander of Magma Studio, who came to brighten up our day with a 
-                    whole atmosphere of positivity and motivation. As Miguel asked us questions about our expectations related
-                    to the program and our objectives towards our future professional life, he would, amid stories about his 
-                    inspiring life, look to deconstruct our preconceived mental barriers about the project in a way that made 
-                    us understand and look to fulfill all of our potential, offering advice and some well needed fresh perspectives,
-                    even interacting with the crowd and “scheduling” a meeting with one of the teams!
-                </p>
-                <p>
-                    Above all else, it was a relaxing occasion which gave us a little push in the right direction and made us organize
-                    our thoughts just a little bit better, with some much needed bits of humor in between. Thanks, Miguel!
-                </p>
-            </div>
-            <div class="section3 section">
-                <h3> DSOR meeting </h3>
-                <p>
-                    Lastly, this Friday we had the pleasure of meeting with Luís Sebastião, research engineer at ISR (Institute for
-                    Systems and Robotics). Luís belongs to the DSOR (Dynamical Systems and Oceanic Robots Lab) group, which focuses
-                    on the design and operation of autonomous marine and aerial robots. 
-                </p>
-                <p>
-                    Given the fact that our project has an aquatic component, we initially met with Luís to discuss the possibility 
-                    of using DSOR’s facilities (namely, their large water tank) to perform some of the underwater tests with our product, 
-                    request to which Luís obliged, while also asking questions about the validity of our ideas and the applicability of our 
-                    implementation. While we initially thought of having the device strapped to the divers’ wrist, Luís suggested that we 
-                    instead have it placed in the user’s head, with the possibility of using multiple receptors. Our initial concept meant 
-                    that the user would have to point their wrist towards their partner, whereas Luís’ idea made the whole process simpler; 
-                    the diver would merely have to look to their partner, making not only the communication part easier, but also freeing up 
-                    the user’s hands and increasing efficiency in the process. 
-                </p>
-                <p>
-                    Another one of Luís’ suggestions was expanding our project to the development of underwater autonomous vehicles, given their 
-                    increasing value in an ever more self-governing world. More specifically, Luís turned our attention to several of the problems 
-                    faced by the industry, such as the lack of underwater positioning systems, the existing difficulty in the synchronization of 
-                    several vehicles operating in a parallel manner and the possibility of building a docking station for these vehicles.
-                </p>
-                <p>
-                    The meeting proved worthwhile, and we look forward to working with Luís and the whole DSOR team!
-                </p>
-            </div>
-        </div>
-        <div class="conclusion section">
-            <h2> Conclusion </h2>
-            <p>
-                As you have read, we’ve had quite the week! We already have a lot on our hands and look to the coming weeks and months with a 
-                lot of excitement. Thank you for reading and we’ll see you on our next post!
-            </p>
-        </div>
+        </div>  
     </div>
 </body>
 

@@ -12,6 +12,10 @@ body {
     margin: 0;
     font-size: 15pt;
 }
+.blog-container {
+    background-color: rgb(70, 70, 70);
+    padding: 5%;
+}
 
 .figcaption {
     color: lightgray;

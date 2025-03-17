@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Meeting with Digital Transmission Specialist</h1>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    Hi! This week, we carried on with our progress in the software 
+                    department, with our main objectives for now being improving the 
+                    transmission rate of the transmitter device. In addition to this, 
+                    we also had a meeting with an expert in digital communication. 
+                    Given that we are currently still developing and working around 
+                    some issues in the software department, this opportunity proved 
+                    itself worthwhile, especially in this relatively early stage in the project.
+
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Meeting </h3>
+                    <p>
+                        On Friday the 28th of February, we met with an investigador specialized in digital communication, 
+                        The interviewee is affiliated with a renowned institution at a national and European level in the 
+                        field of telecommunications. Some of the several expertise topics studied by the research group 
+                        this investigator belongs to consist of Signal Processing for Wireless Communications, Modulation 
+                        and Coding Theory, and Wireless Networks, areas which fall right under our interest.
+                    </p>
+                    <p>
+                        Our main questions were centered around error detection and correction. Although our goal is real-time 
+                        communication, we are still debating the possibility of using pre-recorded messages, which justifies 
+                        studying error correction. Firstly, we asked which error correction code would be best suited in the 
+                        context of our project - the interviewee suggested using a Hamming(7,4) code. The way this algorithm 
+                        functions is that it adds three parity bits to a 4-bit word, turning it into a 7 bit one. The value 
+                        of the parity bits are a result of XOR combinations between the bits of the original word, and they 
+                        are calculated at both the transmitter and the receiver ends, so that if mismatches occur, the 
+                        pattern of the parity bits indicates the position of the erroneous bit, whose value is then corrected. 
+                        This procedure implies that the algorithm can either detect and correct one bit error or detect two 
+                        errors, and although it adds redundancy, it is efficient for small data blocks, as is the case.
+                    </p>
+                    <p>
+                        However, our prototype will be unidirectional, which then raised the following question: what to do 
+                        about inevitable data errors? Well, the interviewee suggested two techniques, one with the purpose of 
+                        correcting burst noise (a sudden disturbance that affects several consecutive bits) and the other one 
+                        with the intent of correcting random errors. Instead of transmitting bits in their original order, the 
+                        first technique, called Interleaving, rearranges them so that consecutive bits in the data stream are 
+                        physically separated in the transmitted signal. The advantages of this method reside in the fact that 
+                        now, burst errors are converted into isolated single-bit errors, which are easier to correct.
+                    </p>
+                    <p>
+                        The second technique is based on the use of a Convolutional Encoder, which is a type of forward error 
+                        correction (FEC) that adds redundancy to the data stream in a structured way, being particularly effective 
+                        for correcting random errors. With this method, the input data bits are processed by the encoder through a 
+                        series of shift registers and XOR operations so that, for each input bit, a couple more arise - it is 
+                        created a codeword with the use of redundancy. This is also a memory-based encoding, meaning that the 
+                        output bits depend on the previous input bits.
+                    </p>
+                </div>
+            </div>
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    This interview proved itself to be one of the most important ones we had so far, because of the knowledge 
+                    and ideas we gained and will now look to embed into our project. We consider ourselves lucky to have had 
+                    the opportunity of chatting with an expert renowned in the matter, to whom we send our thanks.
+                </p>
+                <p>
+                    This interview was conducted by team members Ricardo Rodrigues, Afonso Frazão, Mauro Cordeiro e André Salvaterra.
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>
