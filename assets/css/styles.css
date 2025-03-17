@@ -154,6 +154,9 @@ body {
     margin-bottom: 50px;
     border: 0;
 }
+#team {
+    pointer-events: auto;
+}
 
 .team-member hr{
     height: 4px;
@@ -297,6 +300,19 @@ body {
 .team-member-subtitle {
     font-size: 14px;
     color: #8ca5c6;
+}
+
+#team .linkedin, #team .github {
+    position: relative;
+    pointer-events: auto;
+    transform: none;
+    z-index: 999;
+    display: inline-block;
+    color: #8ca5c6;
+}
+
+#team .highlight {
+    color: white; 
 }
 
 .team-member_info.container-fluid {
