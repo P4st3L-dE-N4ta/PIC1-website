@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Hardware advice search</h1>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    This week proved itself to be another slow one, but the work carries on. Since
+                    our last post, we have made a bit of progress on the hardware department by
+                    seeking counseling with experts in electronics.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Software progress </h3>
+                    <p>
+                        As said before, over the course of this week we looked for help and talked to
+                        experts in electronics, asking them to give their opinion on our hardware choices.
+                        About the microcontroller, we were told that the Teensy board would definitely be a
+                        good choice. Other than this piece of advice, we were also asked to talk more
+                        in-depth about our product and its specifications, which kind of happens to be useful
+                        to talk about here:
+                    </p>
+                    <p>
+                        So, it is set in stone that we are going to use OOK (on-off keying), for the
+                        reasons we have spoken about in previous posts. About the idea of having real-time
+                        communication, it remains as a goal of ours, but that can only happen if it can sustain our
+                        objectives of having an SNR of at least 25 dB, and a BER of 10^-3. Nevertheless, for the
+                        communication itself (real-time or pre-recorded), we look to have a sampling rate somewhere
+                        between 20k and 40k samples/s, transmitting at 8-12 bits. This information would be
+                        compressed with a lossless compression algorithm, like LZW, and we look to integrate
+                        error correction codes, as the Hamming(7,4) code, paired up with other convolutional
+                        code alternatives.
+                    </p>
+                    <p>
+                        We also designed a block diagram for the transmitter, as shown in the image
+                        presented below, which comprised some of the concepts talked about above.
+                    </p>
+                </div>
+            </div>
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    So, here we are. Work has been in fact a bit slow, but we continue thinking
+                    and learning about the project. The future seems promising. Thank you for catching
+                    up with us, and we’ll see you all next week!
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>

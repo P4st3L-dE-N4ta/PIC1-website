@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Increasing our knowledge</h1>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    Hi everybody, here we are again! In the middle of what seems to be an
+                    unproductive run of weeks, this 6th official week of work remains as not being particularly
+                    prolific as well. The only aspect that we seem to have made some progress in is the
+                    hardware part of the project. Given that we’re still waiting for the material to
+                    arrive, we remain a bit conditioned by that fact, but there’s still room to learn,
+                    which we have done.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Progress in the hardware department </h3>
+                    <p>
+                        Last week we talked about how we were chatting with electronics experts about
+                        our prototype, asking for their feedback and debating certain component choices.
+                        Well, that conversation went on during this week, actually, and we got some very
+                        useful and concrete advice.
+                    </p>
+                    <p>
+                        First of all, the expert we contacted mentioned the importance of settling on
+                        a reliable telecommunications link and testing it between two microcontrollers
+                        on a safe environment to see if we can get real-time communication, before moving
+                        on to more obstructed environments. For those that may not know, a link is a
+                        communication channel that connects two or more devices for the purpose of data
+                        transmission. It may be an actual physical device or a virtual circuit. There are several
+                        types of links, but we were recommended the UART (Universal Asynchronous
+                        Receiver-Transmitter) type due to its reliability.
+                    </p>
+                    <p>
+                        Other than this, the expert also pointed out that we may not actually need a
+                        microcontroller at all, but this possibility is based around the use of lasers, following the
+                        concept of LiFi (Light Fidelity). However, this idea goes against our initial plan -
+                        lasers have a very narrow focus, which would require immense precision by the user
+                        when pointing the transmitter to the receiver. For the most part, this just isn’t
+                        feasible. Even though the microcontroller may still bear a bit of a burden, it still
+                        remains our top choice - another reason for this is the fact that the microcontroller
+                        allows the implementation of noise cancelling algorithms, which, even though don’t
+                        really match our main goal, would be a big bonus for our product.
+                    </p>
+                </div>
+            </div>
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    So, here is what we’ve done over the course of this week. We look forward to
+                    the next couple weeks because we are all a bit more freed up in terms of work
+                    related to other classes. When we eventually receive the components we’ve ordered,
+                    we’ll also be able to make a lot more progress and actually do more of the fun
+                    stuff. So, having said all this, see you next week and thank you for stopping by! 
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>
