@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Back to Técnico</h1>
+            <div class="meta">
+                <span class="date">May 4th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">1min and 38s read</span>
+            </div>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    This week marked the start of the 4th term of the year, and with it the return
+                    to normal school activity. Even though we still haven’t received the material we
+                    ordered a while back, over the course of this week we progressed even further in the
+                    software department and started doing some much needed simulations, all the while
+                    “surviving” a nation-wide blackout.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Software Development </h3>
+                    <p>
+                        As we predicted in the latest post, this week we continued last week’s work on
+                        the software part of the prototype, developing our own implementation of some
+                        ECC’s.
+                    </p>
+                    <p>
+                        Our first achievement of the week was writing the C code for the Hamming(7,4)
+                        algorithm relative to the project, which is an ECC we talked about quite a long time
+                        ago. To put it in short, the Hamming(7,4) is an algorithm that adds three
+                        additional check bits to every 4 bits of data, which allows it do either detect and
+                        correct one wrong bit of information or to detect two wrong bit values.
+                    </p>
+                    <p>
+                        The next step in the software development is writing the interleaving part of the code.
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> Work on the simulations </h3>
+                    <p>
+                        Added to the progress in the software part of the project, we also started
+                        doing some simulations, which is something we wrongfully downplayed at the start of
+                        the project, to be honest.
+                    </p>
+                    <p>
+                        So far, our simulations (done in MATLAB) have consisted of basically
+                        generating signals through square waves and then obtaining the equivalent modulated
+                        message with OOK-NRZ, while also adding Gaussian White Noise to the signal to simulate
+                        the noise expected to be found when testing the prototype. With these simple
+                        simulations, our objective is to calculate the SNR from the noise channel in order to then
+                        obtain the BER value of the modulated message signal. In the near future, we will
+                        start adjusting and tweaking the noise channel to more adequately represent the
+                        obstacles the prototype will eventually face underwater.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    Now that we are back to the usual ordeals, we are beginning to pick up the
+                    pace again and look forward to actually do the more hands-on part of the project
+                    (from the moment when the materials eventually arrive…). We have several tasks on
+                    our minds and will keep going at it. 
+                </p>
+                <p>
+                    So, bye, and see you all next week!
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>

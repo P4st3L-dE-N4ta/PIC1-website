@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>We are back!</h1>
+            <div class="meta">
+                <span class="date">April 27th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">1min and 56s read</span>
+            </div>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    After going through an exhausting exam season, we resumed working on our
+                    project, making palpable advancements in the software department.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Justification for the big time gap between posts </h3>
+                    <p>
+                        First of all, we have to address an issue which even though is relatively
+                        minor in comparison to the big picture of this project as a whole, still is somewhat
+                        undesirable - the inconsistency between blog posts. During the last couple of weeks of the
+                        3rd term (and the exam weeks as well), evaluations came piling up and each one of
+                        us had to put this project on hold while we studied for other courses. Now, here
+                        we are again, and it seems that in the following weeks we will be more dedicated
+                        to this project, even more so because we are about to enter the most exciting
+                        part of the project, which is the assembly and tests phases of our prototype!
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> Software progress </h3>
+                    <p>
+                        So, this post’s big event is the progress made in respect to the software part
+                        of the prototype. On the beginning of this semester, our focus remained purely on
+                        transmitting information and then building from there, increasing the transmission rate and
+                        so on. Now, we’ve began working on the 2nd (big) half of this component and so
+                        far, the software team has developed the C code relative to the compression and
+                        decompression of data. 
+                    </p>
+                    <p>
+                        Our implementation was based on the LZW (Lempel-Ziv-Welch) algorithm, which is
+                        a lossless data compression algorithm going back to the 80s. In its simplest
+                        version, the algorithm encodes sequences of 8-bit data as fixed-length 12-bit codes,
+                        where the codes from 0 to 255 represent 1-character sequences consisting of the
+                        corresponding 8-bit character and the codes 256 through 4095 are created in a dictionary for
+                        sequences encountered in the data as it is encoded. At each stage in compression, input
+                        bytes are gathered into a sequence until the next character would make a sequence
+                        with no code yet in the dictionary. The code for the sequence (without that
+                        character) is added to the output, and a new code (for the sequence with that character)
+                        is added to the dictionary.
+                    </p>
+                    <p>
+                        Our next focus is about taking care of the error correction and detection
+                        part, which we predict will be completely finished by the end of next week.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    To be frank, we may not have made much progress this week, but we still worked
+                    on something nonetheless. We hope to receive the material we ordered as soon as
+                    possible in order to immediately assemble the prototype while all the evaluations
+                    relative to the classes that will be starting next week still haven’t showed up.
+                </p>
+                <p>
+                    We are glad to be back. See ya next week!
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>
