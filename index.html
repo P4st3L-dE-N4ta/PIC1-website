@@ -14,12 +14,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/myanimations.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/267514/glyphicons-halflings.css">
+    <link rel="stylesheet" href="assets/css/progress-bar.css">
     <!-- Font Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
-    <!-- Custom JS -->
+    <!-- Custom JS -->~
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </head>
 
@@ -171,6 +174,21 @@
 
     <script src="assets/js/resize.js" defer></script>
 
+
+    <!-- ============================================================================= -->
+    <!--                              Progress Bar                                     -->
+    <!-- ============================================================================= -->
+    <div class="myprogess-bar">
+        <div id="container">  
+            <div class="progress-wrapper"></div>
+        </div>
+        <div class="controls">  
+        <div><label>Steps</label> <input id="input_steps" value="6" type="text" /></div>
+        <div><label>Progress</label> <input id="input_progress" value="1" type="text" /></div>
+        <button id="update" type="button">Submit</button>  
+        </div>
+    </div>
+    <script src="assets/js/progress-bar.js" defer></script>
 
      <!-- ============================================================================= -->
      <!--                              Team Section                                     -->

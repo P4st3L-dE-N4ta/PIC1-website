@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.myprogress-bar html, .myprogress-bar body, .myprogress-bar label,imput,.myprogress-bar span,.myprogress-bar a
+{
+  font-family: 'Open Sans', sans-serif;
+}
+.myprogress-bar html, .myprogress-bar body 
+{  
+  font-size:1vw;
+  position:relative;  
+}
+#container
+{  
+  padding:1.5%;
+  margin:0 auto;         
+}
+#container h1
+{
+  text-align:Center;
+  font-family:verdana;
+  color:#666;
+  font-weight:100;
+}
+.progress-wrapper
+{
+  position:relative;
+  height:1em;
+  background-color: rgb(245, 245, 245);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;    
+  color: rgb(51, 51, 51);
+  display: block;
+  
+}
+.progress-bar
+{   
+  position:absolute;
+  height:100%;
+  font-size:1em;  
+  display: block;
+  box-sizing: border-box;  
+  float: left;  
+  background-color: #66C2FF;     
+  z-index:0;  
+}
+.steps-wrapper
+{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:-1.5em;
+}
+ul.steps
+{ 
+  position:relative;
+  float:left;
+  width:100%;
+  display:inline-block;      
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  clear:both;  
+}
+ul.steps li
+{
+  float:left;  
+  position:relative;  
+  text-align:center;
+  font-size: 1em;
+  white-space:nowrap;
+}
+
+ul.steps li span
+{   
+  margin:0 auto;
+  margin-top: 0.5em;
+  line-height:1em;
+  display:block;
+  height:100%;
+  width:100%;
+  font-size:2em;
+  width:1em;  
+  height:1em;  
+  z-index: 10;
+  background: #75C2EB;
+  border-radius: 50%;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;   
+  white-space: nowrap;  
+    box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+
+}
+ul.steps li span.active
+{
+    border:solid #AFE0FA .1em;
+  line-height:0.8em;
+
+}
+
+
+/* Controls */
+.controls{
+  margin-top:20px;
+  display: none;
+}
+.controls button
+{
+  border:solid #222 .2em;
+  background-color:#555;
+  padding:.5em .8em .5em .8em;
+  color:#ccc;
+  cursor:pointer;
+}
+.controls,input {
+  font-family:verdana;
+  color:#555;
+   }
+.controls > div
+{ 
+  margin-bottom:5px;
+}
+.controls label
+{
+  display:inline-block;
+  width:70px;  
+}
+.controls input
+{
+  text-align:center;
+  border:solid #ccc 1px;
+  width:30px;    
+}
