@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Doing it ourselves!</h1>
+            <div class="meta">
+                <span class="date">May 11th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">1min and 59s read time</span>
+            </div>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    Hello again! This week proved itself to be slightly bittersweet for us. On the
+                    one hand, we still haven’t received the materials we ordered even though we
+                    ordered them quite a while ago, which is setting us a tiny bit back every single day,
+                    but we still managed to progress on the hardware department using some electronics
+                    material owned by Afonso.   Even though we’re not working under ideal conditions, we
+                    still try to find ways to work around the unfortunate circumstances.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Hardware and software progress </h3>
+                    <p>
+                        While working on the prototype during the week, we started by writing an
+                        Arduino program capable of calculating the BER of a snippet from a random binary
+                        transmission. This algorithm may also help us to later be able to distinguish between each
+                        type of error (either random errors or, for instance, burst errors, etc.), and to
+                        hopefully be able to apply different types of ECC’s to each type of error.
+
+                    </p>
+                    <p>
+                        However, there was also quite a big leap on the hardware department. Using an
+                        LM741CN OpAmp, we managed to improve the IV receptor, going from having a BER value of
+                        0 at a distance of 5 cm to having that same value at 70 cm, which is a 1400%
+                        increase in efficacy! And even with these 70 cm we still have a very low SNR value,
+                        which makes us believe that we might be able to amplify the signal even more without
+                        sacrificing its quality. The future seems bright!   
+
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> Weekly meeting with our coordinators </h3>
+                    <p>
+                        Lastly, on Friday we had the usual meeting with our project coordinators. Even
+                        though this is merely a routine project check-up, we did discuss some important
+                        matters about the ElectroDay presentation and some other matters.
+
+                    </p>
+                    <p>
+                        Since the presentation will in reality be a sampling of the prototype in an
+                        already small (and quite conditioned) environment, it means that we are allowed to cut
+                        some corners. And well, given that the implementation of the interleaving algorithm
+                        is proving itself to be more complicated than we originally anticipated, our
+                        counselling professors advised us “not to get lost in things that aren’t totally
+                        necessary”, which means that we are contemplating not doing the interleaving part.
+
+                    </p>
+                    <p>
+                        About the presentation itself, we are planning on demoing the prototype in a
+                        small see-through water tank and having different types of messages (audio, video,
+                        pictures, etc.) being transmitted in a way that can make it possible for the attendees
+                        to hear and/or see the process in real time, either through a speaker or a
+                        screen.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    Another week goes by and we still haven’t received the materials we ordered.
+                    If another week passes, we might start to get a bit preoccupied. But for now, we
+                    remain optimistic and try to progress through our own means. So, see ya next week!
+
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>
