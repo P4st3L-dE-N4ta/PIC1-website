@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Meeting with another engineering school!</h1>
+            <div class="meta">
+                <span class="date">May 18th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">1min and 51s read time</span>
+            </div>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    Hello, everyone! This week, we actually met with a professor from another
+                    engineering school in Lisbon, who we sought because they had been the supervising teacher
+                    for a student writing their Msc. thesis on the same topic we are working on.
+                    Pretty cool, right? 
+                </p>
+                <p>
+                    Also, now that we received the material we requested, we are now working at
+                    full pace, which has been quite exciting!
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> The meeting in itself </h3>
+                    <p>
+                        So, we had been planning this meeting for a while, and it eventually happened.
+                        Firstly, we met with a telecommunications expert, who clarified a lot of things for us.
+                        We started talking about software and the way we will modulate the signal, and we
+                        were given some ideas, such as implementing coherent reception. Then, we were also
+                        recommended not to use a signal between 1 and 0, but given the complexity of these
+                        upgrades and the fact that we don’t really need them for now, we chose not to make the
+                        suggested adjustments, i.e., we wil keep using OOK with NRZ.
+                    </p>
+                    <p>
+                       However, we did follow the expert’s suggestions in the hardware department.
+                        The big piece of advice we were given was to add an active filter to the circuit
+                        because it minimizes the noise “heard” in the reception of the signal due to the fact
+                        that it both filters and amplifies the signal at the same time; before, we
+                        amplified it first and then filtered it, but that ends up worsening the noise problem,
+                        actually, because the amplification adds noise that is then caught in the filter (which
+                        we don’t really want). 
+                    </p>
+                    <p>
+                        Other than this, we also talked about using either LEDs or lasers as emitters
+                        - as you know, we were already pretty sure we would use the LEDs, but it is
+                        always good to explore all possible options. The teacher told us that the lasers
+                        could actually have a diffusion angle wide enough to be used in this application
+                        (about 10 to 12º), which could make them better than the LEDs, given the lasers’
+                        really intense light, but we found one big flaw that hadn’t crossed our minds until
+                        the meeting - the laser has a very long loading time for each beam that is sent
+                        between ON-OFF states, which isn’t really compatible with the high frequency of our
+                        modulation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    So, we had the meeting, and even though we didn’t really find every bit of
+                    advice useful for the present time, we still learned a lot, and the suggestions we
+                    did implement have proven to be quite successful. This is all for this week, bye!
+
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>

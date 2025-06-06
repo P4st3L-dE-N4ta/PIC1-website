@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>We got together in Afonso’s basement! And also met with a former professor of ours</h1>
+            <div class="meta">
+                <span class="date">May 25th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">3min and 07s read time</span>
+            </div>
+        </div>
+        <div id="blog-image" class="blog-image">
+            <figure>
+                <div class="scrollable-image-wrapper">
+                    <img src="../assets/Images/blogpost11_image1.png" alt="Figure 1 - Circuit Simulated in LTSpice">
+                </div>
+                <figcaption class="figcaption">
+                    <p>Font: Own Image</p>
+                </figcaption>
+                <figcaption class="figure-subtitle">
+                    <p>Figure 1 - Circuit Simulated in LTSpice</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                     This week was quite busy, actually! Well, for one, we met in person to work
+                    on the prototype for the first time, given the late arrival of the material and
+                    the fact that we all don’t really live close to each other. On the other hand, on
+                    that same meeting, we ran into some obstacles and decided to contact a former
+                    electronics professor of ours, who kindly accepted our request for help and gave us some
+                    incredibly useful advice. After receiving some very helpful advice, some of us got
+                    together again during the rest of the week to implement the suggested changes. Quite a
+                    wild week!
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3> Meeting in Afonso’s basement </h3>
+                    <p>
+                        With the expression “We got together in Afonso’s basement!”, we meant that we
+                        all went to Afonso’s house to work on the prototype. However, we immediately ran
+                        into some problems with the circuit. Having already appropriately set up the
+                        transmission part of the device, it so happened that the light emitted by the LED wasn’t
+                        strong enough to be recognized by the receiver - this is alarming because the
+                        detection of the signal is practically everything about the project! The signal wasn’t
+                        detected with neither the green nor the blue LED, but was quite sensitive with the
+                        ambient light.
+                    </p>
+                    <p>
+                       We ended up trying several different circuits, but, to no avail, didn’t
+                        progress much. So, we decided to contact a former professor of ours, specialized in
+                        electronics.
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> Help from a professor </h3>
+                    <p>
+                        After emailing the professor, we met in their office. After quickly briefing
+                        them about our ideas and the difficulties we were having, the teacher immediately
+                        started asking us questions and giving advice.
+                    </p>
+                    <p>
+                        First of all, they advised us not on the circuit, but on the way we are
+                        sending the signal - as a quick way of reminding the reader, we were sending the
+                        signal through a carrier signal modulated with NRZ-OOK. Their suggestions were
+                        increasing the frequency of the carrier signal, as well as advising us to reconsider the
+                        selected code.
+                    </p>
+                    <p>
+                        Now, about our difficulty in regards to the hardware part, a lot of
+                        adjustments were made. About the emitting LED, it simply wasn’t strong enough to be
+                        detected, so we were told that we needed to use larger ones, which we already have at
+                        our disposal - either that, or we could alternatively resort to phototransistors,
+                        which is a path we don’t really want to pursue. Beyond this change, the biggest
+                        contribution we got from the meeting was about how to connect everything to the circuit
+                        entry, how to assemble all of the different parts and how to layout the different
+                        amplifier stages. 
+                    </p>
+                    <p>
+                        The meeting was conducted by the whole team.
+                    </p>
+                </div>
+                <div class="section3 section">
+                    <h3> Even more progress </h3>
+                    <p>
+                        As was said, the team met again on the weekend to keep working on the
+                        prototype. For now, having already designed the circuit we intend on using, we are still
+                        testing the circuits in different ways, in order to uncover some equipment limitations
+                        and so on. Our big idea consists in amplifying the signal to, then, send it
+                        through a comparator to obtain the modulated message waveform, perfectly straight.
+                    </p>
+                    <p>
+                        We start by amplifying the signal with a TIA (Trans-Impedance Amplifier),
+                        followed by a buffer. Then, we enter the signal treatment phase, where the buffer’s
+                        output signal is divided between one that goes straight to the positive input of a
+                        comparator and another one that goes through an active peak detector followed by a
+                        resistive divider, towards the negative input of the comparator. This device, which is
+                        not really a comparator, but an OpAmp (we don’t really need a comparator because
+                        we are sticking with low voltages and we needn’t worry about the slew-rate), ends
+                        up “drawing” a perfectly rectangular wave, to serve as the modulated message.
+                        Another thing worth mentioning is that the peak detector (envelope filter), comprised
+                        of an OpAmp with positive feedback, a diode, a capacitor and a (large) resistor,
+                        is set up this way, i.e., is active, in order to avoid a hefty voltage drop due
+                        to the diode, and keep the output as “clean” as possible.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    This was quite a busy week, but we did manage to progress a lot, much thanks
+                    to the advice we got in our meeting with the professor. The next couple of weeks
+                    seem quite exciting, so stay tuned. Bye!
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>

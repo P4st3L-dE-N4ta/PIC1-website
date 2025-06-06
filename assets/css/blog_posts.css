@@ -40,6 +40,24 @@ body {
     margin-bottom: 10vw;
 }
 
+.blog-image {
+    margin-bottom: 5vw;
+}
+
+.scrollable-image-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.scrollable-image-wrapper img {
+    position: relative;
+    width: 150vw; /* make it wider than the screen */
+    max-width: none; /* prevent Bootstrap-like restrictions */
+    height: auto;
+    display: inline-block;
+}
+
 .section {
     margin-bottom: 8vw;
 }
