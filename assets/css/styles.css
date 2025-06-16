@@ -40,6 +40,26 @@ body {
     padding-right: 1em !important;
 }
 
+.navbar-nav .nav-link.active {
+    color: #00aced !important; /* or any highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid #00aced;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu {
+    background-color: #343a40; /* Dark background */
+    border: none;
+}
+
+.dropdown-item {
+    color: #fff; /* White text */
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+    color: #fff;
+}
 
 /*************************************************************
 * Hero Section

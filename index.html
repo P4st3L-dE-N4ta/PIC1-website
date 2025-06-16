@@ -22,11 +22,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
     <!-- Custom JS -->
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </head>
 
-<body class="dark-theme">
+<body class="dark-theme" data-spy="scroll" data-target=".navbar" data-offset="100">
 
     <!-- ================================================================ -->
     <!--                          Navigation Bar                          -->
@@ -50,10 +51,16 @@
                             Home
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#projectinfo" class="nav-link">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Our Project
                         </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="projectDropdown">
+                            <a class="dropdown-item text-white" href="#projectinfo">Our Project</a>
+                            <a class="dropdown-item text-white" href="#myprogress-bar">Progress bar</a>
+                            <a class="dropdown-item text-white" href="html/files-page.html">Related Files</a>
+                            <a class="dropdown-item text-white" href="#">Demo Interaction</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="#team" class="nav-link">
@@ -178,16 +185,18 @@
     <!-- ============================================================================= -->
     <!--                              Progress Bar                                     -->
     <!-- ============================================================================= -->
-    <div class="myprogess-bar">
-        <div id="container">  
-            <div class="progress-wrapper"></div>
+    <section id="myprogress-bar">
+        <div class="myprogess-bar">
+            <div id="container">  
+                <div class="progress-wrapper"></div>
+            </div>
+            <div class="controls">  
+            <div><label>Steps</label> <input id="input_steps" value="6" type="text" /></div>
+            <div><label>Progress</label> <input id="input_progress" value="1" type="text" /></div>
+            <button id="update" type="button">Submit</button>  
+            </div>
         </div>
-        <div class="controls">  
-        <div><label>Steps</label> <input id="input_steps" value="6" type="text" /></div>
-        <div><label>Progress</label> <input id="input_progress" value="1" type="text" /></div>
-        <button id="update" type="button">Submit</button>  
-        </div>
-    </div>
+    </section>
     <script src="assets/js/progress-bar.js" defer></script>
 
      <!-- ============================================================================= -->

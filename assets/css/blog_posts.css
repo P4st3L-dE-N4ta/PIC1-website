@@ -21,14 +21,26 @@ body {
     overflow-x: hidden;
     background-color: rgb(90, 90 ,90);
     color: white;
-    padding: 15%;
-    padding-top: 5%;
     margin: 0;
     font-size: 15pt;
 }
+
+/* Center the blog content and give breathing room */
 .blog-container {
     background-color: rgb(70, 70, 70);
+    max-width: 900px;       /* Keeps text nicely readable */
+    margin: 0 auto;         /* Center horizontally */
     padding: 5%;
+}
+
+.navbar-brand{
+    z-index: 99;
+    font-size: 40px; /* 40px */
+    font-family: Modak;
+}
+.navbar-brand img{
+    height: 60px; /* 60px */
+    width: 60px; /* 60px */ 
 }
 
 .figcaption {

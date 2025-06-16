@@ -1,0 +1,73 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.navbar-brand{
+    z-index: 99;
+    font-size: 40px; /* 40px */
+    font-family: Modak;
+}
+.navbar-brand img{
+    height: 60px; /* 60px */
+    width: 60px; /* 60px */ 
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #00aced;
+    font-weight: bold;
+}
+
+.file-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.file-card {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 172, 237, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 172, 237, 0.3);
+}
+
+.file-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #00aced;
+}
+
+.video-preview {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.btn-outline-info {
+    border-color: #00aced;
+    color: #00aced;
+}
+
+.btn-outline-info:hover {
+    background-color: #00aced;
+    color: #fff;
+}
+
+.btn-outline-secondary {
+  color: #ccc;
+  border-color: #555;
+}
+.btn-outline-secondary:hover {
+  color: white;
+  background-color: #444;
+  border-color: #666;
+}

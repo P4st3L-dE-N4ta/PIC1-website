@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Project Files - UOWC</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/files-page.css">
+        <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-dark text-white">
+
+        <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/Images/diver-logo.png" class="d-inline-block align-top" alt="Logo">
+                    UOWC
+                </a>
+                <div class="text-center mb-4">
+                    <button class="btn btn-outline-secondary" onclick="goBack()">← Back</button>
+                </div>
+            </div>
+        </nav>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+        <section class="container py-5">
+            <h1 class="text-center mb-4">📁 Project Files</h1>
+            <p class="text-center mb-5">Download or view documents, diagrams, and media related to the project.</p>
+
+            <div class="file-list">
+
+            <!-- Sample PDF -->
+            <div class="file-card">
+                <h5>Project Overview (PDF)</h5>
+                <a href="files/project-overview.pdf" target="_blank" class="btn btn-outline-info btn-sm">View</a>
+                <a href="files/project-overview.pdf" download class="btn btn-outline-light btn-sm">Download</a>
+            </div>
+
+            <!-- Sample PowerPoint -->
+            <div class="file-card">
+                <h5>Presentation Slides (PPTX)</h5>
+                <a href="files/presentation.pptx" download class="btn btn-outline-light btn-sm">Download</a>
+            </div>
+
+            <!-- LTSpice Diagram -->
+            <div class="file-card">
+                <h5>LTSpice Schematic</h5>
+                <a href="files/circuit.asc" download class="btn btn-outline-light btn-sm">Download</a>
+            </div>
+
+            <!-- MP4 Video -->
+            <div class="file-card">
+                <h5>Demo Video (MP4)</h5>
+                <video controls class="video-preview">
+                <source src="files/demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <a href="files/demo.mp4" download class="btn btn-outline-light btn-sm mt-2">Download Video</a>
+            </div>
+
+            </div>
+        </section>
+
+    </body>
+</html>
