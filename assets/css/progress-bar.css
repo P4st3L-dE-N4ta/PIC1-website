@@ -20,6 +20,8 @@
   color:#666;
   font-weight:100;
 }
+
+
 .progress-wrapper
 {
   position:relative;
@@ -54,7 +56,6 @@
 ul.steps
 { 
   position:relative;
-  float:left;
   width:100%;
   display:inline-block;      
   list-style-type:none;
@@ -101,6 +102,23 @@ ul.steps li span.active
 
 }
 
+@media (max-width: 1200px) {
+  .step-label {
+    transform: rotate(-80deg);
+    transform-origin: top left;
+    display: inline-block;
+    font-size: 0.7em;
+    white-space: nowrap;
+    position: relative;
+    top: -10vh;
+    right: -4vw;
+  }
+
+  #container {
+    margin-top: 25vh;
+  }
+}
+
 
 /* Controls */
 .controls{
@@ -134,3 +152,14 @@ ul.steps li span.active
   border:solid #ccc 1px;
   width:30px;    
 }
+
+#gantt-chart {
+  max-width: 100%;
+  overflow-x: auto;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #eee;
+}
+
+

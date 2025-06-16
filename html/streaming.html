@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UOWC Live Input Panel</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/streaming.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-dark text-white">
+
+  <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="../index.html" class="navbar-brand d-flex align-items-center">
+        <img src="../assets/Images/diver-logo.png" alt="Logo" class="logo-img" />
+        UOWC
+      </a>
+        <div class="text-center mb-4">
+            <button class="btn btn-outline-secondary" onclick="goBack()">← Back</button>
+        </div>
+    </div>
+  </nav>
+  <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+  <div class="main-container d-flex flex-column flex-lg-row p-3">
+
+    <!-- Input panel -->
+    <section class="input-panel p-3">
+      <h2>Send Input</h2>
+
+      <!-- Optional WebSocket IP input -->
+      <!-- <div class="mb-3">
+        <label for="ws-ip" class="form-label">WebSocket IP</label>
+        <input type="text" id="ws-ip" class="form-control" placeholder="ws://localhost:8080" />
+      </div> -->
+
+      <div class="mb-3">
+        <label for="text-input" class="form-label">Text Input</label>
+        <textarea id="text-input" class="form-control" rows="5" placeholder="Type your message here..."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="image-input" class="form-label">Upload Image</label>
+        <input id="image-input" class="form-control" type="file" accept="image/*" />
+      </div>
+
+      <button id="send-text-btn" class="btn btn-outline-info me-2">Send Text</button>
+      <button id="send-image-btn" class="btn btn-outline-info">Send Image</button>
+    </section>
+
+    <!-- Display area -->
+    <section class="display-panel p-3 flex-fill">
+      <h2>Received Content</h2>
+      <div id="display-area" class="display-area rounded bg-secondary text-white p-3">
+        <!-- Received text or image will appear here -->
+        <p class="text-muted">Waiting for input...</p>
+      </div>
+    </section>
+
+    <!-- Log panel -->
+    <aside class="log-panel p-3 bg-dark text-light">
+      <h2>Activity Log</h2>
+      <div id="log-messages" class="log-messages overflow-auto">
+        <!-- Log messages inserted here -->
+      </div>
+    </aside>
+  </div>
+
+  <!-- Optional JS, you’ll add websocket logic here later -->
+  <script src="../assets/js/streaming.js"></script>
+
+</body>
+</html>

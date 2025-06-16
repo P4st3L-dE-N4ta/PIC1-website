@@ -12,10 +12,10 @@
     <!-- FontAwesome CSS -->
     <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/myanimations.css">
     <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/267514/glyphicons-halflings.css">
     <link rel="stylesheet" href="assets/css/progress-bar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Font Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,9 @@
     <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
     <!-- Custom JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </head>
 
 <body class="dark-theme" data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -32,7 +33,7 @@
     <!-- ================================================================ -->
     <!--                          Navigation Bar                          -->
     <!-- ================================================================ -->
-     <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+     <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
         <div class="container">
             <a href="index.html" class="navbar-brand">
                 <img src="assets/Images/diver-logo.png" class="d-inline-block align-top">
@@ -40,7 +41,7 @@
             </a>
 
             <!-- Toggle Button for Smartphones -->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navNavbar">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span></button>
             
             <!-- Navigation Bar Menu Items -->
@@ -59,7 +60,7 @@
                             <a class="dropdown-item text-white" href="#projectinfo">Our Project</a>
                             <a class="dropdown-item text-white" href="#myprogress-bar">Progress bar</a>
                             <a class="dropdown-item text-white" href="html/files-page.html">Related Files</a>
-                            <a class="dropdown-item text-white" href="#">Demo Interaction</a>
+                            <a class="dropdown-item text-white" href="html/streaming.html">Demo Interaction</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -106,7 +107,7 @@
         <div class="row1 rows flex-container">
             <div class="img1 img-container flex-container">
                 <figure>
-                    <img src="assets/Images/Protoype_preview.png" class="d-block" style="width: 450px;" alt="img1">
+                    <img src="assets/Images/Protoype_preview.png" class="d-block" alt="img1">
                     <figcaption class="figcaption">
                         Source: AI Generated
                     </figcaption>
@@ -123,7 +124,7 @@
         <div class="row2 rows flex-container">
             <div class="img2 img-container flex-container">
                 <figure>
-                    <img src="assets/Images/Blue_LEDs.png" class="d-block" style="width: 400px;" alt="img2">
+                    <img src="assets/Images/Blue_LEDs.png" class="d-block" alt="img2">
                     <figcaption class="figcaption">
                         Source: Free Image Bank
                     </figcaption>
@@ -140,7 +141,7 @@
         <div class="row3 rows flex-container">
             <div class="img3 img-container flex-container">
                 <figure>
-                    <img src="assets/Images/PIN-photodiode-image.png" class="d-block" style="width: 400px;" alt="img3">
+                    <img src="assets/Images/PIN-photodiode-image.png" class="d-block" alt="img3">
                     <figcaption class="figcaption">
                         Source: Free Image Bank + Photoshop edited
                     </figcaption>
@@ -163,7 +164,7 @@
         <div class="row4 rows flex-container">
             <div class="img4 img-container flex-container">
                 <figure>
-                    <img src="assets/Images/Embedded-systems-datascientest-1024x585.jpg" class="d-block" style="width: 550px;" alt="img4">   
+                    <img src="assets/Images/Embedded-systems-datascientest-1024x585.jpg" class="d-block" alt="img4">   
                     <figcaption class="figcaption">
                         Source: Free Image Bank
                     </figcaption>
@@ -179,7 +180,7 @@
         </div>
     </section>
 
-    <script src="assets/js/resize.js" defer></script>
+    <!--<script src="assets/js/resize.js" defer></script>-->
 
 
     <!-- ============================================================================= -->
@@ -196,6 +197,23 @@
             <button id="update" type="button">Submit</button>  
             </div>
         </div>
+
+        <!-- Collapsible Button -->
+        <div class="gantt-toggle-container" style="text-align: center; margin-top: 2rem;">
+            <button class="btn btn-outline-light" data-toggle="collapse" data-target="#ganttCollapse">
+                Show Detailed Timeline
+            </button>
+        </div>
+
+        <!-- Collapsible Gantt Chart Section -->
+        <div class="collapse" id="ganttCollapse">
+            <div id="gantt-chart" style="margin-top: 2rem;"></div>
+        </div>
+
+        <!-- Frappe Gantt Library -->
+        <link rel="stylesheet" href="https://unpkg.com/frappe-gantt/dist/frappe-gantt.css" />
+        <script src="https://unpkg.com/frappe-gantt/dist/frappe-gantt.min.js"></script>
+
     </section>
     <script src="assets/js/progress-bar.js" defer></script>
 
@@ -360,7 +378,7 @@
                             </div>
                             <div class="team-member_bodytext">
                                 <h3 class="team-member-title">André Salvaterra</h3>
-                                <span class="team-member-subtitle">Researcher and Helping Hand</span>
+                                <span class="team-member-subtitle">Software Developer</span>
                                 <hr>
                             </div>
                         </div>

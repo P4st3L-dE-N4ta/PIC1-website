@@ -1,0 +1,131 @@
+/* Fonts */
+body, .navbar-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-brand {
+  font-family: 'Modak', cursive;
+  font-size: 36px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.main-container {
+  min-height: 80vh;
+  gap: 1.5rem;
+}
+
+/* Input Panel */
+.input-panel {
+  flex: 0 0 320px;
+  background-color: #4c4c4c;
+  border-radius: 0.5rem;
+}
+
+.input-panel h2 {
+  font-family: 'Modak', cursive;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+#text-input, #image-input {
+  background-color: #606060;
+  border: none;
+  color: white;
+}
+
+#text-input::placeholder {
+  color: #bbb;
+}
+
+/* Display Panel */
+.display-panel {
+  flex: 1;
+  background-color: #565656;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-panel h2 {
+  font-family: 'Modak', cursive;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.display-area {
+  flex-grow: 1;
+  background-color: #333;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.display-area img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Log Panel */
+.log-panel {
+  flex: 0 0 280px;
+  border-left: 2px solid #444;
+  font-size: 0.9rem;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-panel h2 {
+  font-family: 'Modak', cursive;
+  font-size: 24px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.log-messages {
+  flex-grow: 1;
+  background-color: #222;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #ccc;
+}
+
+/* Buttons */
+.btn-outline-info {
+  border-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.btn-outline-info:hover {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .input-panel, .log-panel {
+    flex: none;
+    width: 100%;
+  }
+
+  .display-panel {
+    width: 100%;
+    min-height: 200px;
+  }
+}

@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault(); // Stop default instant jump
 
             const targetID = this.getAttribute("href");
-            if(targetID == "#home"){
+            if(targetID === "#home"){
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"
                 })
-            } else if(targetID =="#team") {
+            } else if(targetID === "#team") {
                 const target = document.querySelector(targetID);
                 if (target) {
                     const offset = navbarHeight - 50; // Adjust this value if needed
