@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/Images/diver-logo.png" class="d-inline-block align-top" alt="Logo">
+                UOWC
+            </a>
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-secondary" onclick="goBack()">← Back</button>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Setting up the final prototype</h1>
+            <div class="meta">
+                <span class="date">June 8th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">1min and 33s read time</span>
+            </div>
+        </div>
+        <div id="blog-image-12" class="blog-image">
+            <figure>
+                <img src="../assets/Images/prototipo.png" alt="Figure 1 - Receptor Prototype">
+                <figcaption class="figcaption">
+                    <p>Source: Own Image</p>
+                </figcaption>
+                <figcaption class="figure-subtitle">
+                    <p>Figure 1 - Receptor Prototype</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    As we get closer and closer to the project’s deadline, we keep on working, as
+                    there is still a lot to be done. For now, we are finishing everything related to the
+                    final prototype, still making some adjustments, looking for better material and
+                    wiring everything up.
+
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3>Hardware adjustments </h3>
+                    <p>
+                        We started the week by searching more material to work with - namely, we
+                        searched for a couple of  OpAmps and some more LEDs. But why more OpAmps? Well, first
+                        of all, we want to increase the frequency of the modulated signal, which has
+                        become quite a limiting factor with the models we have been using; other than this,
+                        we’re also looking for a better current bias. And what have these upgrades allowed
+                        us to do? Well, although it may not seem like much, the answer to the question is
+                        as simple as: the signal clarity and definition improved greatly. 
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> Wiring the prototype </h3>
+                    <p>
+                        After the final decisions about the components were made, what was then left
+                        to do was to wire up the circuit on a stripboard and run some tests to check if
+                        everything was alright and if, as we expected, the performance improved. And it did!
+                        There is a really big difference between working with a simple breadboard and an
+                        actual stripboard meant for prototypes, the signal’s clarity and performance improved
+                        greatly, so we are satisfied with that!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    It looks like the hardware part of the project is now officially completed,
+                    which comes with a very pleasant feeling of relief, above all else. For the next
+                    (and FINAL) week of work, all that’s essentially left to do is finish the software
+                    part responsible for “translating” the information to and from a binary stream of
+                    data in order to actually transmit media through the prototype, and not just a LED
+                    beam. Other than this, we will also have to test the operation of the circuit
+                    through water, which is actually the final objective of this whole thing!
+                </p>
+                <p>
+                    So, basically, there’s only one week left, and we are very excited to finish
+                    our project and see the cumulus of our work. That’s about it, bye!
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>

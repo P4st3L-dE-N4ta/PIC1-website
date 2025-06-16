@@ -56,6 +56,13 @@ body {
     margin-bottom: 5vw;
 }
 
+.blog-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
 .scrollable-image-wrapper {
     overflow-x: auto;
     white-space: nowrap;
