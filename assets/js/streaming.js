@@ -48,7 +48,20 @@ sendTextBtn.addEventListener('click', () => {
 // Simulated send image function
 sendImageBtn.addEventListener('click', () => {
   const file = imageInput.files[0];
-  if (!file) return alert('Please select an image to send.');
+  if (!file) {
+    alert('Please select an image to send.');
+    return;
+  }
+
+  const maxSize = 15 * 1024; // 15 KB
+  if (file.size > maxSize) {
+    const sizeKB = Math.round(file.size / 1024);
+    const msg = `Image "${file.name}" is too large (${sizeKB} KB). Max allowed is 15 KB.`;
+    log(msg);
+    alert('Image too large! Max 15 KB allowed.');
+    imageInput.value = ''; // clear input
+    return;
+  }
 
   const reader = new FileReader();
   reader.onload = () => {
@@ -63,3 +76,4 @@ sendImageBtn.addEventListener('click', () => {
 
   imageInput.value = '';
 });
+
