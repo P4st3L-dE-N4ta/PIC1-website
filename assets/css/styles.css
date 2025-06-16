@@ -1,7 +1,6 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -89,6 +88,8 @@ body {
     text-align: right;
     color: black;
 }
+
+
 
 
 /*************************************************************
