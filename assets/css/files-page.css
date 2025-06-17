@@ -71,3 +71,9 @@ h1 {
   background-color: #444;
   border-color: #666;
 }
+
+.file-card-wide {
+    grid-column: 1 / -1;
+    max-width: 640px;
+}
+
