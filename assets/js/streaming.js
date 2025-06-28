@@ -30,19 +30,25 @@ function displayContent(content, type) {
   }
 }
 
-// Simulated send text function
 sendTextBtn.addEventListener('click', () => {
   const text = textInput.value.trim();
   if (!text) return alert('Please enter some text to send.');
 
-  log(`Sent text: "${text}"`);
-  // Simulate received event
-  setTimeout(() => {
-    log(`Received text: "${text}"`);
-    displayContent(text, 'text');
-  }, 500);
+  // Removed receiving logic because we will
+  // not be receiving anything back on the website
+  // website websocket client (AMAQUINA) -> python websocket server (AMAQUINA) -> python websocket client (Laptop TIC)
+  
 
-  textInput.value = '';
+  // NEW - connect to python server
+  const sock = new WebSocket("ws://localhost:5555");
+  log("connected to python server");
+
+  // When the connection opens, send the text
+  sock.addEventListener("open", (event) => {
+	sock.send(text);
+	log(`Sent text: "${text}"`);
+  });
+
 });
 
 // Simulated send image function
