@@ -4,13 +4,13 @@ from websockets.asyncio.server import serve
 
 async def handler(sock):
     async for msg in sock:
-        print("Received", msg)
-        
+        if isinstance(msg, str):
+            print("Received text:", msg)
+        elif isinstance(msg, bytes):
+            print(f"Received binary message of length {len(msg)} bytes")
         # Broadcast to every connection
-        # (website will ignore this broadcast)
         for socket in a.connections:
-            print("Sent", msg)
-            await socket.send(msg)
+            await socket.send(msg)  # msg can be str or bytes
 
 async def main():
     async with serve(handler, "localhost", 5555) as server:

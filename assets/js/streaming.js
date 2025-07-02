@@ -34,6 +34,9 @@ sendTextBtn.addEventListener('click', () => {
   const text = textInput.value.trim();
   if (!text) return alert('Please enter some text to send.');
 
+  // Show preview immediately
+  displayContent(text, 'text');
+
   // Removed receiving logic because we will
   // not be receiving anything back on the website
   // website websocket client (AMAQUINA) -> python websocket server (AMAQUINA) -> python websocket client (Laptop TIC)
@@ -45,13 +48,14 @@ sendTextBtn.addEventListener('click', () => {
 
   // When the connection opens, send the text
   sock.addEventListener("open", (event) => {
-	sock.send(text);
-	log(`Sent text: "${text}"`);
+    sock.send(text);
+    log(`Sent text: "${text}"`);
   });
 
+  textInput.value = '';
 });
 
-// Simulated send image function
+// Send image function
 sendImageBtn.addEventListener('click', () => {
   const file = imageInput.files[0];
   if (!file) {
@@ -61,25 +65,39 @@ sendImageBtn.addEventListener('click', () => {
 
   const maxSize = 15 * 1024; // 15 KB
   if (file.size > maxSize) {
-    const sizeKB = Math.round(file.size / 1024);
-    const msg = `Image "${file.name}" is too large (${sizeKB} KB). Max allowed is 15 KB.`;
-    log(msg);
     alert('Image too large! Max 15 KB allowed.');
-    imageInput.value = ''; // clear input
+    imageInput.value = '';
     return;
   }
 
-  const reader = new FileReader();
-  reader.onload = () => {
-    log(`Sent image: ${file.name} (${Math.round(file.size / 1024)} KB)`);
-    // Simulate received event
-    setTimeout(() => {
-      log(`Received image: ${file.name}`);
-      displayContent(reader.result, 'image');
-    }, 500);
-  };
-  reader.readAsDataURL(file);
+  const sock = new WebSocket("ws://localhost:5555");
+  sock.binaryType = "arraybuffer"; // IMPORTANT: receive/send binary data
+
+sock.addEventListener("open", () => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      sock.send(reader.result);  // Send binary data
+      log(`Sent image: ${file.name} (${Math.round(file.size / 1024)} KB)`);
+
+      // Show preview immediately by converting ArrayBuffer to base64 data URL
+      const base64String = arrayBufferToBase64(reader.result);
+      const dataUrl = `data:${file.type};base64,${base64String}`;
+      displayContent(dataUrl, 'image');
+    };
+    reader.readAsArrayBuffer(file);
+  });
 
   imageInput.value = '';
 });
 
+
+// Helper function to convert ArrayBuffer to Base64 string
+function arrayBufferToBase64(buffer) {
+  let binary = '';
+  const bytes = new Uint8Array(buffer);
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return window.btoa(binary);
+}
