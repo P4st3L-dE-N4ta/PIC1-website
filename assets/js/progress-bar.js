@@ -7,7 +7,7 @@
 });*/
 
 $(document).ready(function() {
-  var pb = new progressBar(6, 7, true); // currentStep = 5, totalSteps = 7
+  var pb = new progressBar(6.8, 7, true); // currentStep = 6.8, totalSteps = 7
 });
 
 /* todo. Turn into a prototype function */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Underwater Optical Wireless Communications</title>
+    
+    <!-- Links to stuff using the website -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/83c5bdd928.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/blog_posts.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom JS -->
+    <!--<script src="../assets/js/scripts.js"></script>-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/Images/diver-logo.png" class="d-inline-block align-top" alt="Logo">
+                UOWC
+            </a>
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-secondary" onclick="goBack()">← Back</button>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <div class="blog-container">
+        <div id="blog-title" class="blog-title">
+            <h1>Final week of work!</h1>
+            <div class="meta">
+                <span class="date">June 15th, 2025</span>
+                <span class="dot">•</span>
+                <span class="read-time">2min and 04s read time</span>
+            </div>
+        </div>
+        <div id="blog-subtitles" class="blog-subtitles">
+            <div class="summary section">
+                <h2> Summary </h2>
+                <p>
+                    Hi everybody! Finally, we have arrived to the very last week of work on the
+                    project. It was a bit hectic, having to juggle between running the final tests on the
+                    prototype, finishing both the video and the poster to be delivered and writing the pitch
+                    deck presentation, but here we are. There’s no going back now, which makes us, on
+                    the one hand, a bit scared, but also satisfied with what we have achieved so far.
+                    So, here’s what we’ve done during this week.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="section1 section">
+                    <h3>Software improvements </h3>
+                    <p>
+                        Up until this week, everything that was left to be done on the software
+                        department was the whole process of actually transmitting different types of media; so
+                        far, we had only been capable of sending and detecting a straight beam from a LED,
+                        not a whole modulated message.
+                    </p>
+                    <p>
+                        So, instead of going straight to the signal generator, generating a square
+                        wave and then modulating it, we decided to start with an Arduino device due to its
+                        reliability and ease of use, and got some good results. Then, we moved on to our beloved
+                        RaspberryPi to achieve even better modulation quality, which is what we got.
+                    </p>
+                    <p>
+                        But how does all of this work? Well, in the emission half of the prototype’s
+                        software, the RaspberryPi receives the information through serial data and sends it in a
+                        binary stream to the modulation segment. Then, the other RaspberryPi, now in the
+                        reception half, decodes the binary data and sends the translated information to another
+                        PC. These pieces of  information can be anything from text, to audio, pictures and
+                        even videos, which greatly increases the magnitude of our prototype.
+                    </p>
+                </div>
+                <div class="section2 section">
+                    <h3> Final tests </h3>
+                    <p>
+                        At last, the make or break moment of this entire project: can we really
+                        transmit data through water?
+                    </p>
+                    <p>
+                        In order to do these tests, everybody got together in Rodrigo’s basement with
+                        the purpose of running the final tests with his turtle’s tank filled with just
+                        enough water to allow the light to pass through the length of the tank (between the
+                        transmitter and the receiver). And everything went perfectly! The test signal, which is
+                        just a straight beam, was perfectly captured by the photodiode over the tank’s
+                        length of 60 cm, and worked for quite a wide angle, as seen in the images below. So,
+                        we really can transmit data through water!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="conclusion section">
+                <h2> Conclusion </h2>
+                <p>
+                    This post marks the end of all the work assigned to this project, and we are
+                    really satisfied with what we have done. Maybe if it was about a month ago, we would
+                    not be that optimistic, but practically everything fell into place for us.
+                </p>
+                <p>
+                    Now, with all of our own consciences cleared, we are beginning to ready
+                    ourselves for the next step, which will be ElectroDay, a couple of weeks from now. We
+                    are looking forward to it, and will do our best to show everybody what we have
+                    done. Thank you, and goodbye.
+                </p>
+            </div>
+        </div>  
+    </div>
+</body>
+
+
+</html>
