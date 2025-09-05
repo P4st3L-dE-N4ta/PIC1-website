@@ -3,10 +3,11 @@ from websockets.asyncio.client import connect
 from websockets.exceptions import ConnectionClosed
 
 from PIL import Image
-import io
+#import io
+import serial as se
 
 async def handler():
-    hostname = "localhost"  # Change to your server's IP if needed
+    hostname = "amaquina.duckdns.org"  # Change to your server's IP if needed
     port = "5555"
     address = f"ws://{hostname}:{port}"
 
@@ -17,7 +18,7 @@ async def handler():
 
                 if isinstance(msg, str):
                     print("Received text message")
-                    send_serial(msg.encode('utf-8'))  # convert text to bytes before sending serial
+                    send_serial(msg.encode('utpython-websocketsf-8'))  # convert text to bytes before sending serial
                 elif isinstance(msg, bytes):
                     print(f"Received binary message ({len(msg)} bytes)")
                     #binary_data = msg  # your image bytes here
@@ -36,8 +37,22 @@ def send_serial(msg: bytes):
     Replace this with your actual serial code.
     """
 
+    ser = se.Serial(
+    	port='/dev/ttyACM0',
+    	baudrate=115200,
+    	parity=serial.PARITY_ODD,
+    	stopbits=serial.STOPBITS_ONE,
+    	bytesize=serial.EIGHTBITS,
+    	timeout=1,
+    	writeTimeout=1 # Verificar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    )
+
+    ser.isOpen()
+
+    ser.write(input + '\n')
+
     print("Sending to serial:", msg)
-    # Example: serial_port.write(msg)
+    write(msg)
     return
 
 if __name__ == "__main__":

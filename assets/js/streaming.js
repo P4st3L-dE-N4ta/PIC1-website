@@ -43,7 +43,7 @@ sendTextBtn.addEventListener('click', () => {
   
 
   // NEW - connect to python server
-  const sock = new WebSocket("ws://localhost:5555");
+  const sock = new WebSocket("ws://amaquina.duckdns.org:5555");
   log("connected to python server");
 
   // When the connection opens, send the text
@@ -52,7 +52,6 @@ sendTextBtn.addEventListener('click', () => {
     log(`Sent text: "${text}"`);
   });
 
-  textInput.value = '';
 });
 
 // Send image function
@@ -70,7 +69,7 @@ sendImageBtn.addEventListener('click', () => {
     return;
   }
 
-  const sock = new WebSocket("ws://localhost:5555");
+  const sock = new WebSocket("ws://amaquina.duckdns.org:5555");
   sock.binaryType = "arraybuffer"; // IMPORTANT: receive/send binary data
 
 sock.addEventListener("open", () => {

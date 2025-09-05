@@ -13,7 +13,7 @@ async def handler(sock):
             await socket.send(msg)  # msg can be str or bytes
 
 async def main():
-    async with serve(handler, "localhost", 5555) as server:
+    async with serve(handler, "0.0.0.0", 5555) as server:
         global a
         a = server
         await server.serve_forever()
